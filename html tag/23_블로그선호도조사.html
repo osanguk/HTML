@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>블로그 선호도 조사</title>
+        <style>
+            body{
+                background-color: snow;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .컨테이너{
+                background-color: plum;
+                margin: 0 auto;
+                padding: 20px;
+                width: 70%;
+                box-shadow: 0 0 20px rgb(77, 151,215);
+                border-radius: 10px;
+                text-align: center;
+            }
+            button{
+                background-color: olivedrab;
+                margin: 0 auto;
+                padding: 10px 20px; /*위 아래는 10px 왼쪽 오른쪽은 20px */
+                border-radius: 5px;
+                border: 7px;
+            }
+            h1{
+                text-align: center ;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="컨테이너">
+            <h1>블로그 선호도 조사
+                <form>
+                    <label>맛집
+                    <input type ="radio" name="선호도" value="맛집"
+                    >맛집</label>
+                    <label>
+                        <input type="radio" name="선호도" value="투자"/>
+
+                    </label>
+                    <label>
+                        <input type="radio" name="선호도" value="재태크"/>
+
+                    </label>
+                    <label>
+                    <input type="checkbox" name="구독방법" value="뉴스래터">
+                </label>
+                <label>
+                    <input type = "checkbox" name="구독방법" value="메일수신">
+                </label>
+<br><br><br>
+                </form>
+            </h1>
+        </div>
+    </body>
+</html>

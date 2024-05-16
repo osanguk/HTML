@@ -1,0 +1,105 @@
+주문하기.html
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>주문하기</title>
+    
+</head>
+    <div class="컨테이너">
+        <h1>한식 주문하기</h1>
+        <form>
+            <div class="메인꾸미기">
+                <label>메뉴선택 : </label>
+                <div>
+                    <img class="메인이미지" src="음식사진-20240514T060949Z-001/음식사진/된장찌개.PNG">
+                    <br>
+                    <input type="radio">된장찌개
+                </div>
+                <div>
+                    <img class="메인이미지" src="음식사진-20240514T060949Z-001/음식사진/비빔밥.PNG">
+                    <br>
+                    <input type="radio">비빔밥
+                </div>
+                <div>
+                    <img class="메인이미지" src="음식사진-20240514T060949Z-001/음식사진/불고기.PNG">
+                    <br>
+                    <input type="radio">불고기
+
+                </div>
+                <div>
+                   <img class="메인이미지" src="음식사진-20240514T060949Z-001/음식사진/삼겹살.jpg">
+                    <br>
+                    <input type="radio">삼겹살
+                </div>
+
+                <div>
+                    <img class="메인이미지" src="음식사진-20240514T060949Z-001/음식사진/김치찌개.jpg">
+                     <br>
+                     <input type="radio">김치찌개
+                 </div>
+                
+        <style>
+            body{
+                background-color: navajowhite;
+            }
+            .컨테이너{
+                background-color: orange;
+                padding: 20px;
+                margin: 20px auto;
+                border-radius: 10px;
+                box-shadow: 0 0 10px #d7d7d7;
+            }
+            h1, button{
+                text-align: center;
+            }
+            button{
+                width: 200px;
+                background-color: #555;
+                color:white;
+                border: none;
+            }
+        </style>
+        <form>
+            
+            <div>
+                <label>맛 선택</label>
+                <select>
+                    <option></option>
+                </select>
+            </div>
+            <div>
+                <label>추가옵션</label>
+                <input type="checkbox">계란
+                <input type="checkbox">김치
+                <input type="checkbox">두부
+                <input type="checkbox">라면 사리
+                <input type="checkbox">고기 추가
+                <input type="checkbox">곱빼기
+                <input type="checkbox">공기밥 추가
+
+            </div>
+            <div>
+                <label>배달주소:</label>
+                <textarea rows="3"></textarea><br>
+                <small>도시/산간 지역은 배달비 3000원 부가</small>
+            </div>
+
+            <div class="헤더">
+                <h1>KH 배달 서비이스</h1>
+            </div>
+            <div class="네비게이션">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">주문하기</a></li>
+                </ul>
+
+            </div>
+            <div class="컨테이너">
+
+                <div class="푸터">
+                    &copy; 2024 배달 서비스. All right reserved.
+                </div>
+            <button>주문하기</button>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<h1>form 태그 / input 태그</h1>
+
+<h3>태그 form/h3>
+    <pre>
+        -입력 양식을 작성하는 영역(공간)
+        -내부에 작성된 입력 값을 지정된 공간으로 제출하는 역할
+
+        속성
+        1.action: 제출된 공간을 지정하는 속성(주소를 작성)
+        2.method(방법/방식): 설정된 공간으로 데이터를 전달하는 방식
+        3.name= 자바 스크립트에서 사용 form 폼의 이름을 지정
+        4.target:제출ㄷ된 페이지를 현재 또는 새 탭으로 열기 설정
+        <h3>input 태그</h3>
+        <pre>
+            -웹문서에서 사용자가 입력할 수 있는 양식을 제공해주는 태그
+            -많은 type이 존재하고,input의 변형 형태도 다양하게 존재
+            -name 속성이 99% 이상 필수로 작성되어야 함
+                (작성해줘야 추후 개발할 때 용이)
+
+                type 속성을 환경에 맞게 설정
+                type 종류
+                text : 한 줄 텍스트 입력 상자(기본값)
+                password: 비번 입력상자(모자이크 처리)
+                url :주소 설정
+                search : 검색 기능
+                tel: telephone 전화번호
+                email:모양은 text와 동일하나 이메일 작성용도(@ At 작성했는지 확인)
+
+                number: 숫자만 입력 가능한 상자
+                range : 슬라이드바를 이용해서 숫자 지정(단독사용x,js 같이 사용)
+                    -min(최소값) max(최대값) step(숫자가 증가/감소하는 단계) value
+
+                date, month, week, time, datetime-lacal : 날짜 관련 태그   
+        </pre>
+        <h3>라벨 태그</h3>
+        <pre>
+            label 태그는 input 태그의 앞 뒤에 위치하며 input에 관련된 설명을 제공하는 데 사용하며
+            label에서 name과 같은 for 속성의 이름을 사용
+            input 과 label 태그를 연결해줄 때
+            id 와 for 속성을 사용해서 연결
+        </pre>
+        
+        
+        <form>
+            아이디 : <input type="text" name="id"><br>
+            비밀번호 :<input type="password" name="pw"><br>
+            이메일 : <input type = "email" name="email"><br>
+            숫자 : <input type="number" name="num"><br>
+            <input type="range" min="10" max="100" step="1" value="30" name="range"<br>
+
+        </form>
+        <hr>
+        <h4>내가 좋아하는 색상 고르기</h4>
+        <input type="checkbox" name="색상">빨강
+        <input type="checkbox" name="색상">초록
+        <input type="checkbox" name="색상">노랑
+
+        <h4>radio checkbox에 value와 checked를 넣기</h4>
+
+        <input type="radio" name="팀" value="A팀 선택했음">A팀
+        <input type="radio" name="팀" value="B팀 선택했음">B팀
+        
+    </pre>
+</html>
