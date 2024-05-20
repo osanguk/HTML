@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>입출금하기</title>
+
+    </head>
+    <body>
+        <h1>입출금하기</h1>
+        <hr>
+        <style>
+            .account, .account *{
+                margin: 0;
+                padding: 0;
+            }
+            .account{
+                border: 5px solid gray;
+                border-radius: 20px;
+                padding: 10px 50px;
+                width: 500px;
+                margin:100px auto;
+            }
+            .row{
+                display: flex;
+                margin: 20px 0;
+                padding:20px 0;
+            }
+            .button{
+                margin: 0 30px;
+                border: 5px soild black;
+                background-color: white;
+                font-size: 30px;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+            .입금버튼꾸미기{
+                border-color: goldenrod;
+                color:gold;
+
+
+            }
+            .출금버튼꾸미기{
+                border-color: goldenrod;
+                color:gold;
+
+
+            }
+        </style>
+        <div class="account">
+            <div class="row">
+                <h1>잔액 : <span id="output">0</span>원 </h1>
+            </div>
+            <div class="row input-row">
+                <label>금액 :</label>
+                <input type="text" id="amount">
+                <span>원</span>
+            </div>
+            <div class="row">
+                <button class="입금버튼꾸미기" onclick="입금버튼()">입금하기</button>
+                <button class="출금버튼꾸미기" onclick="출금버튼()">출금하기</button>
+            </div>
+        </div>
+
+        <script>
+            let 잔액 = 0;
+
+            function 입금버튼(){
+                const 얼마 = parseInt(document.getElementById("amount").value);
+
+                잔액 += 얼마;
+                document.getElementById("output").innerText = 잔액;
+            }
+
+           if(isNAN(입금액)&& 입금액 <0){
+            alert("올바른 금액을 입력하세요.");
+           }else{
+            잔액 += dlqrmador;
+            document.getElementById("output").innerText = 잔액;
+           }
+           
+           
+            function 출금버튼(){
+                const 얼마 = parseInt(document.getElementById("amount").value);
+
+
+                if(출금액 <= 잔액){
+                    잔액 -= 출금액;
+                    document.getElementById("output").innerText = 잔액;
+                }else{
+                    alert("잔액 부족 끄아앙")
+                }
+               
+                
+            }
+        </script>
+    </body>
+
+</html>

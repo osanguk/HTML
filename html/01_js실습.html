@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>테마 변경</title>
+        <body>
+            <h1>테마 밝은 테마 / 어두운 테마로 변경</h1>
+            <button onclick="밝은모드()">라이트모드</button>
+            <button onclick="어두운모드()">다크모드</button>
+            <script>
+                
+                const body = document.querySelector("body");
+                
+                function 밝은모드() {
+                    body.style.color="white";
+                    body.style.backgroundColor="black";
+                }
+                function 어두운모드(){
+                    body.style.color="black";
+                    body.style.backgroundColor="white";
+                }
+            </script>
+
+        </body>
+    </head>
+
+</html>

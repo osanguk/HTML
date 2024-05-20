@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>조건문</title>
+    </head>
+    <body>
+        <h1>조건문</h1>
+        <pre>
+            프로그래밍
+        </pre>
+        <h3>if(만약에) 문</h3>
+        <pre>
+            <code>
+                if(조건식){
+                    조건식이 true일 경우 실행할 코드;
+                }
+            </code>
+            * 조건식 : 결과가 true, false인 식
+        </pre>
+        <input type="number" id="인풋1">
+        <button onclick="체크1()">양수인지 검사하기</button>
+        <script>
+            const 인풋1=document.getElementById("인풋1");
+            function 체크1(){
+                const 양수확인값 = 인풋1.value;
+
+                if(양수확인값 >0){
+                    alert("양수임다!")
+                }
+                    if(양수확인값<0){
+                        alert("no 양수")
+                    }
+                
+            }
+        </script>
+        <hr>
+        <h3>if-else 문</h3>
+        <pre>
+            <code>
+                if(조건식){
+                    조건식이 true인 경우 수행할 코드;
+                }else{
+                    조건식이 false인 경우 수행할 코드;
+                }
+            </code>
+
+            *else는 조건식을 작성하는 ()없음
+        </pre>
+        <h5>0~100 사이에 랜덤 숫자를 발생시켜서 홀/짝 판별</h5>
+        <button onclick="체크2()">확인하기</button>
+        <script>
+            //랜텀숫자 -> 난수 : 정의된 범위 내에서 무작위로 추출된 수
+            //난수: 어지러울 난
+
+            // 자바 Random() Math.random() 사용하는 것 처럼
+            // 자바스크립트에서 Math.random() 사용할수 있음
+
+            const 랜덤숫자 = MAth.random()* 101 //
+            
+            function 체크2(){
+                            const 랜덤숫자 = Math.random();
+                        
+            //홀수일 경우 % 2 !=0
+
+            if(랜덤숫자 % 2 !=0){
+                alert(랜덤숫자 +"은/는 홀수입니다.");
+            }
+
+        }
+
+        
+
+
+        </script>
+        <pre>
+            <script>
+                const 입력받은나이 = document.getElementById(나이값);
+                const age = 입력받은나이.value;
+                function 체크4(){
+                    if(입력받은나이 >= 0 && 입력받은나이 <=13){
+                  alert("어린이");
+                
+                } else if (입력받은나이 >= 14 && 입력받은나이 <=19){
+                    alert("청소년");
+                } else{
+                    alert("성인")
+                }
+
+                }
+            
+
+            </script>
+        </pre>
+    </body>
+
+</html>
