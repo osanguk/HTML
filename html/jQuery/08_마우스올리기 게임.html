@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>마우스올리기 게임</title>
+        <script src="http://code.jquery.com/jquery-3.7.1.js"> </script>
+       <script>
+            $(document).ready(function(){
+                $(".box").on("mouseenter",function(){
+                    $(this).css("background-color", get랜덤색상()); // this =.box
+                })
+            })
+            function get랜덤색상(){
+                const 색상코드 ='0123456789ABCDEF';
+                let 색상 = '#'; 
+
+                for(let i =0; i< 6 ; i++){
+                    
+                    
+                    색상 += 색상코드[Math.floor(Math.random()*16)];
+                    
+                }
+                return 색상;
+
+            }
+        </script>
+        <style>
+            .box{
+                width:100px;
+                height: 100px;
+                background-color: orangered;
+                margin: 10px;
+                display: inline-block;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </body>
+</html>

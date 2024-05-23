@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>회원가입 유효성 검사</title>
+    </head>
+    <body>
+        <h2>회원가입</h2>
+        <form action="#" name="signupForm">
+            <h3>이름</h3>
+            <input type="text" class="signup-input" id="inputName" name=""user_name>
+            <br>
+            <span class="input-result">한글 2~5자(단모음,단자음 제외)</span>
+        </form>
+        <script>
+            const checkList = {
+                "inputName" : false
+            }
+            const inputName = document.querySelector("#inputName");
+
+            inputName.addEventListener("input",e=>{
+                const value = e.target.value;
+                const span = e.target.nextELementSibling.nextELementSibling;
+
+                const 한글정규식 = /^[가-힇]{2,5}$/;
+
+                if(한글정규식.test(value)){
+                    span.textContent = "유효한 이름의 형식임을 알리는 bye 바이다!";
+                    span.ClassList.add("shake key.....check!");
+                    span.ClassList.remove("shake key... error!")
+                    checkList["inputName"]=true;
+                }else{
+                    span.textContent = "악앆! 유효하지 않은 이름의 형식 입니다. 뽀르삡뽑 "
+                    span.ClassList.add("shake key.....error!");
+                    checkList["inputName"]=false;
+                }
+            })
+        </script>
+
+    </body>
+</html>

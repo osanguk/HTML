@@ -1,0 +1,42 @@
+<!--
+    toggle 이용 보이고 숨기는 기능 작성
+
+    <div id="문구모음">
+        <h1>명언들<h1>
+        <p>노력에 집착해라 숙명적인 노력을</p>
+        <p>할 수 있다고 믿는 사라은 경국 그렇게 된다</p>
+        <p>당신이 포기할 때, 나는 시작한다.</p>
+        </div>
+        <button onclick="문구숨기기()">
+        
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <tilte>명언</tilte>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script>
+            function 문구숨기기(){
+                $("#문구모음").hide();
+            }
+            function 문구보이기(){
+                $("#문구모음").show();
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id="문구모음">
+            <h1>명언들<h1>
+            <p>노력에 집착해라 숙명적인 노력을</p>
+            <p>할 수 있다고 믿는 사라은 경국 그렇게 된다</p>
+            <p>당신이 포기할 때, 나는 시작한다.</p>
+         </div>
+            <button onclick="문구숨기기()">문구숨기기</button>
+            <button onclick="문구보이기()">문구보이기</button>
+    </body>
+    
+</html>

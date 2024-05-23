@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>클릭한 숫자 기록</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin:0;
+                padding:0;
+            }
+            .container{
+                width: 150px;
+                margin: 30px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .number{
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+                display: flex;
+                padding:flex;
+                justify-content: center;
+                cursor: pointer;
+                user-select: none;
+                margin-bottom: 5px;
+                margin-right: 1px;
+            }
+            .number:hover{
+                background-color: springgreen;
+            }
+            .number:active{
+                background-color: pink;
+            }
+
+            #result-Btn{
+                border:none;
+                padding:10px 20px;
+                border-radius: 10px;
+                margin-top: 10px;
+                color: gold;
+                background-color: silver;
+            }
+            #resultBtn:hover{
+                background-color: deepskyblue;
+            }
+            #result{
+                font-size: 24px;
+                font-weight: bold;
+                color: slategrey;
+                display: block;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>클릭한 숫자들 기록하기</h1>
+        <div class="container">
+        <div class="number">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="number">4</div>
+        <div class="number">5</div>
+        <div class="number">6</div>
+        <div class="number">7</div>
+        <div class="number">8</div>
+        <div class="number">9</div>
+        <!--숫자 게임에는 10이 없음-->
+        <div class="number">0</div>
+        </div>
+       
+        <div>
+            클릭한숫자 : <span id="result"></span>
+            <br/>
+            <button id="resultBtn">초기화</button>
+        </div>
+        <script>
+            const numbers = document.querySelectorAll(".number");
+            const result = document.querySelector("#result");
+
+            for(let item of numbers){
+                item.addEventListener("click",(e) => {
+
+                    if(result.textContent.length === 10) {
+                        alert("10글자까지만 입력 가능")
+                        return;
+                    }
+                    //이미 선택한 숫자인 경우 다시 선택하지 못하게 처리
+                    if(e.target.classList.contains("active")){
+                        alert("이미 선택한 숫자 입니다.")
+                        return;
+                    }
+                    result.textContent += e.target.textContent;
+
+                    e.target.classList.add("active");
+
+                    if(result.textContent.length === 10){
+                        for(let item of numbers){
+                            item.removeEventListner("click", handleClick);
+                        }
+                        console.log("더이상 숫자를 선택할수 없다.");
+                    }
+
+                });
+
+            }
+
+            document.querySelector("#resultBtn").addEventListener("click",()=>{
+                result.textContent="";
+            });
+        </script>
+    </body>
+</html>

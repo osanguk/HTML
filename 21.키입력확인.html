@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>키입력확인</title>
+
+    </head>
+    <body>
+        <h1>키 입력 </h1>
+        <div class="container">
+            <div class="key-box">
+                <div class="key">Q</div>
+                <div class="key">W</div>
+                <div class="key">E</div>
+                <div class="key">R</div>
+                <div id="key"></div>
+            </div>
+        </div>
+        <script>
+
+            const 키들=document.querySelectorAll(".key");
+
+            document.addEventListener("keydown",function(e){
+
+                let 숫자값저장;
+
+                switch(e.key){
+                    case 'q' : 숫자값저장 = 0;
+                    break;
+                    case 'w':숫자값저장 = 0;
+                    break;
+                    case 'e':숫자값저장 = 0;
+                    break;
+                    case 'r':숫자값저장 = 0;
+                    break;
+
+                    default :
+                    return;
+                }
+
+                키들[숫자값저장].style.background = "lightblue";
+                키들[숫자값저장].style.color = "black";
+                
+
+            });
+        </script>
+    </body>
+</html>
