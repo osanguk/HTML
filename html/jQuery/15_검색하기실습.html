@@ -9,8 +9,11 @@
                 $("#검색박스").keyup(function(){
                     const 검색박스 = $(this).val();
                     $('li').each(function(){
-                        var 텍스트 = $(this).text();
-                        if(텍스트.indexOf(검색박스)===-1){
+                        var text = $(this).text();
+                        console.log("***************************");
+                        console.log(text);
+
+                        if(text.indexOf(검색박스)===-1){
                             $(this).hide();
 
                         }else{
